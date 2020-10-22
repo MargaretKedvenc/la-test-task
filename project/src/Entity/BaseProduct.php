@@ -5,9 +5,18 @@ namespace src\Entity;
 abstract class BaseProduct
 {
     const NAME_PANCAKE = 'pancake';
+    const NAME_AMERICANO = 'americano';
 
     /** @var array */
     protected $ingredients = [];
+
+    /**
+     * @param array $ingredients
+     */
+    public function __construct(array $ingredients)
+    {
+        $this->ingredients = $ingredients;
+    }
 
     /**
      * @return string
